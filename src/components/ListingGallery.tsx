@@ -17,28 +17,24 @@ const ListingGallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   return (
-    <section className="py-12 bg-secondary/50">
-      <div className="container mx-auto px-4">
-        <h2 className="font-heading text-3xl font-bold mb-8 text-foreground">
-          Galeria de Fotos
-        </h2>
+    <div className="max-w-4xl">
+      <h2 className="text-2xl font-bold mb-6">Galeria de Fotos</h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {images.map((image, idx) => (
-            <div
-              key={idx}
-              className="relative aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer group"
-              onClick={() => setSelectedImage(idx)}
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-            </div>
-          ))}
-        </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+        {images.map((image, idx) => (
+          <div
+            key={idx}
+            className="relative aspect-[4/3] overflow-hidden rounded-lg cursor-pointer group"
+            onClick={() => setSelectedImage(idx)}
+          >
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+          </div>
+        ))}
       </div>
 
       {/* Lightbox */}
@@ -56,12 +52,12 @@ const ListingGallery = () => {
           <img
             src={images[selectedImage].src}
             alt={images[selectedImage].alt}
-            className="max-w-full max-h-full object-contain rounded-2xl"
+            className="max-w-full max-h-full object-contain rounded-lg"
             onClick={(e) => e.stopPropagation()}
           />
         </div>
       )}
-    </section>
+    </div>
   );
 };
 

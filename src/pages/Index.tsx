@@ -1,24 +1,55 @@
-import ListingHero from "@/components/ListingHero";
-import ListingOverview from "@/components/ListingOverview";
-import ListingGallery from "@/components/ListingGallery";
-import ListingDetails from "@/components/ListingDetails";
-import ListingFeatures from "@/components/ListingFeatures";
-import ListingHost from "@/components/ListingHost";
+import Header from "@/components/Header";
+import Breadcrumb from "@/components/Breadcrumb";
+import ListingHeader from "@/components/ListingHeader";
+import ListingTabs from "@/components/ListingTabs";
+import BookingSidebar from "@/components/BookingSidebar";
 import RelatedListings from "@/components/RelatedListings";
 import ListingFooter from "@/components/ListingFooter";
+import heroImage from "@/assets/hero-chacara.jpg";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
-      <ListingHero />
-      <ListingOverview />
-      <ListingGallery />
-      <ListingDetails />
-      <ListingFeatures />
-      <ListingHost />
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      <Breadcrumb 
+        items={[
+          { label: "São Paulo", href: "/sao-paulo" },
+          { label: "Hortolândia", href: "/hortolandia" },
+          { label: "Espaço Gold Eventos" }
+        ]}
+      />
+
+      {/* Hero Image */}
+      <div className="relative h-[500px] overflow-hidden">
+        <img
+          src={heroImage}
+          alt="Espaço Gold Eventos"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+      </div>
+
+      <ListingHeader />
+
+      {/* Main Content */}
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Left Column - Tabs Content */}
+          <div className="lg:col-span-2">
+            <ListingTabs />
+          </div>
+
+          {/* Right Column - Booking Sidebar */}
+          <div className="lg:col-span-1">
+            <BookingSidebar />
+          </div>
+        </div>
+      </div>
+
       <RelatedListings />
       <ListingFooter />
-    </main>
+    </div>
   );
 };
 
