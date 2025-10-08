@@ -1,13 +1,24 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import ListingHero from "@/components/ListingHero";
+import ListingOverview from "@/components/ListingOverview";
+import ListingGallery from "@/components/ListingGallery";
+import ListingDetails from "@/components/ListingDetails";
+import ListingFeatures from "@/components/ListingFeatures";
+import ListingHost from "@/components/ListingHost";
+import RelatedListings from "@/components/RelatedListings";
+import ListingFooter from "@/components/ListingFooter";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="min-h-screen">
+      <ListingHero />
+      <ListingOverview />
+      <ListingGallery />
+      <ListingDetails />
+      <ListingFeatures />
+      <ListingHost />
+      <RelatedListings />
+      <ListingFooter />
+    </main>
   );
 };
 
