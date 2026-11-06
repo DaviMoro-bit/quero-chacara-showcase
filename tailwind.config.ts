@@ -96,6 +96,10 @@ export default {
           from: { transform: "scale(1)" },
           to: { transform: "scale(1.05)" },
         },
+        "ken-burns": {
+          from: { transform: "scale(1) translate3d(0, 0, 0)" },
+          to: { transform: "scale(1.12) translate3d(0, -1.5%, 0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
