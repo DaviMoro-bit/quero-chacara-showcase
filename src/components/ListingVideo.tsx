@@ -58,23 +58,23 @@ const ListingVideo = () => {
                   type="button"
                   onClick={() => setPlaying(true)}
                   aria-label="Assistir ao vídeo do espaço"
-                  className="absolute inset-0 flex items-center justify-center"
+                  className="absolute inset-0 flex items-center justify-center pb-12 sm:pb-0"
                 >
-                  <span className="relative flex h-20 w-20 items-center justify-center rounded-full bg-background/95 shadow-large ring-8 ring-background/20 transition-transform duration-300 group-hover:scale-110">
-                    <Play className="h-7 w-7 translate-x-0.5 fill-primary text-primary" />
+                  <span className="relative flex h-16 w-16 items-center justify-center rounded-full bg-background/95 shadow-large ring-8 ring-background/20 transition-transform duration-300 group-hover:scale-110 sm:h-20 sm:w-20">
+                    <Play className="h-6 w-6 translate-x-0.5 fill-primary text-primary sm:h-7 sm:w-7" />
                   </span>
                 </button>
 
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5 md:p-7">
-                  <div>
-                    <p className="font-heading text-lg font-semibold text-background md:text-xl">
-                      Espaço Gold Eventos · Tour
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-4 md:p-7">
+                  <div className="min-w-0">
+                    <p className="font-heading truncate text-base font-semibold text-background sm:text-xl">
+                      Espaço Gold Eventos
                     </p>
-                    <p className="text-sm text-background/70">
+                    <p className="hidden text-sm text-background/70 sm:block">
                       Piscina · Área gourmet · Salão
                     </p>
                   </div>
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-foreground/60 px-3 py-1 text-xs font-medium text-background backdrop-blur-sm">
+                  <span className="inline-flex flex-shrink-0 items-center gap-1.5 rounded-full bg-foreground/60 px-3 py-1 text-xs font-medium text-background backdrop-blur-sm">
                     <Clock3 className="h-3.5 w-3.5" />
                     0:06
                   </span>
