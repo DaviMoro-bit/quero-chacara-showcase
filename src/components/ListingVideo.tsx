@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { Play, Clock3, Camera, MessageCircle } from "lucide-react";
-import videoAsset from "@/assets/video-espaco-gold.mp4.asset.json";
 import posterImage from "@/assets/hero-chacara.jpg";
 import Reveal from "./Reveal";
 
 // Troque apenas a linha abaixo para publicar o vídeo real do espaço.
-const videoSrc = (videoAsset as { url: string }).url;
+const videoSrc = "/videos/espaco-gold-tour.mp4";
 
 const ListingVideo = () => {
   const [playing, setPlaying] = useState(false);
@@ -93,7 +92,7 @@ const ListingVideo = () => {
             O vídeo abre sem som automático — ative quando quiser.
           </span>
           <a
-            href="#video"
+            href="#booking"
             className="inline-flex items-center gap-2 font-medium text-primary transition-colors hover:text-primary-hover"
           >
             <MessageCircle className="h-4 w-4" />

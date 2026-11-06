@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 
 const BookingSidebar = () => {
   return (
-    <div className="lg:sticky lg:top-24">
+    <div id="booking" className="lg:sticky lg:top-24 scroll-mt-28">
       <Card className="p-6 border-border shadow-lg">
         <div className="mb-6">
           <div className="flex items-baseline gap-2 mb-1">
