@@ -6,6 +6,7 @@ import BookingSidebar from "@/components/BookingSidebar";
 import RelatedListings from "@/components/RelatedListings";
 import ListingFooter from "@/components/ListingFooter";
 import ListingVideo from "@/components/ListingVideo";
+import { Play } from "lucide-react";
 import heroImage from "@/assets/hero-chacara.jpg";
 
 const Index = () => {
