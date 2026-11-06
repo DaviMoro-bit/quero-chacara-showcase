@@ -1,6 +1,8 @@
 import { Star, MapPin } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import heroImage from "@/assets/hero-chacara.jpg";
+import gallery1 from "@/assets/gallery-1.jpg";
+import gallery2 from "@/assets/gallery-2.jpg";
+import gallery3 from "@/assets/gallery-3.jpg";
 
 const listings = [
   {
@@ -9,7 +11,7 @@ const listings = [
     price: "R$ 2.000",
     rating: 4.8,
     reviews: 89,
-    image: heroImage,
+    image: gallery1,
   },
   {
     title: "Espaço Paraíso",
@@ -17,7 +19,7 @@ const listings = [
     price: "R$ 1.800",
     rating: 4.9,
     reviews: 112,
-    image: heroImage,
+    image: gallery2,
   },
   {
     title: "Rancho Alegria",
@@ -25,7 +27,7 @@ const listings = [
     price: "R$ 2.200",
     rating: 4.7,
     reviews: 76,
-    image: heroImage,
+    image: gallery3,
   },
 ];
 

@@ -5,6 +5,8 @@ import ListingTabs from "@/components/ListingTabs";
 import BookingSidebar from "@/components/BookingSidebar";
 import RelatedListings from "@/components/RelatedListings";
 import ListingFooter from "@/components/ListingFooter";
+import ListingVideo from "@/components/ListingVideo";
+import { Play } from "lucide-react";
 import heroImage from "@/assets/hero-chacara.jpg";
 
 const Index = () => {
@@ -28,6 +30,17 @@ const Index = () => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0">
+          <div className="container mx-auto px-4 pb-6">
+            <a
+              href="#video"
+              className="inline-flex items-center gap-2 rounded-full bg-background/90 px-4 py-2 text-sm font-semibold text-foreground shadow-medium backdrop-blur-sm transition-smooth hover:bg-background"
+            >
+              <Play className="h-4 w-4 fill-primary text-primary" />
+              Assistir ao vídeo
+            </a>
+          </div>
+        </div>
       </div>
 
       <ListingHeader />
@@ -46,6 +59,8 @@ const Index = () => {
           </div>
         </div>
       </div>
+
+      <ListingVideo />
 
       <RelatedListings />
       <ListingFooter />
